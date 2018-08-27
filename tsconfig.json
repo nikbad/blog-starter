@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "declaration": false,
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": false,
+    "noResolve": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "strict": true,
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "compileOnSave": false,
+  "allowSyntheticDefaultImports": true
+}

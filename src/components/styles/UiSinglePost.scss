@@ -1,0 +1,22 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  //text-align: center;
+}
+
+.single-post--title {
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+.single-post--body {
+  font-size: 1.7rem;
+}

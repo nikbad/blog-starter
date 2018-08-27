@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "dependencies": {
+    "@types/vue": "^2.0.0",
+    "vue": "^2.5.2",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^6.0.0",
+    "css-loader": "^0.28.1",
+    "sass-loader": "^7.0.3",
+    "node-sass": "^4.9.2",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.7.2",
+    "vue-loader": "^12.2.0",
+    "vue-template-compiler": "^2.5.2",
+    "webpack": "^2.5.0",
+    "axios": "0.18.0",
+    "moment": "^2.14.1",
+    "vue-global-events": "1.0.3"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.0.8",
+    "webpack-serve": "^1.0.2"
+  }
+}
