@@ -4,19 +4,21 @@
     }
 
     .search-field {
-        position: relative;
-        font-size: 3rem;
+        background-color: white;
+        border-radius: .5rem;
         border: 1px solid black;
         color: rgba(0, 0, 0, .5);
-        border-radius: .5rem;
-        background-color: white;
+        font-size: 3rem;
+        padding: 0 1.5rem;
+        position: relative;
     }
 
     input {
-        border: none;
         border-radius: .5rem;
-        padding: 1rem 1.5em;
+        border: none;
         font-size: 3rem;
+        padding: 1rem 0;
+        width: 100%;
     }
 
     input:focus {
