@@ -1,4 +1,4 @@
-<style lang="scss" scoped>
+<style lang="scss">
     .grid-container {
         display: grid;
         grid-template-columns: auto auto auto;
@@ -10,11 +10,9 @@
         font-size: 30px;
     }
 
-    .single-post--title {
-        h2 {
-            font-size: 2rem;
-            font-weight: bold;
-        }
+    .single-post--title h2 {
+        font-size: 2rem;
+        font-weight: bold;
     }
 
     .single-post--body {

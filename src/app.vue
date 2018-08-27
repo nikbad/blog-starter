@@ -28,9 +28,8 @@
     import {Vue, Component} from "vue-property-decorator";
     import {EventBus} from "./event-bus";
     import {Post} from "./types";
-    import UiPosts from "./components/UiPosts";
-    import UiHeader from "./components/UiHeader";
-
+    import UiPosts from "./components/UiPosts.vue";
+    import UiHeader from "./components/UiHeader.vue";
 
     @Component({components: {UiPosts, UiHeader}})
     export default class App extends Vue {

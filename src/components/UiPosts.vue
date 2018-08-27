@@ -9,7 +9,7 @@
 <script lang="ts">
     import {Vue, Component, Prop} from "vue-property-decorator";
     import {Post} from "../types";
-    import UiSinglePost from "./UiSinglePost";
+    import UiSinglePost from "./UiSinglePost.vue";
 
     @Component({components: {UiSinglePost}})
     export default class UiPosts extends Vue {

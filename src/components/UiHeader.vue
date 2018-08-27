@@ -7,8 +7,8 @@
 
 <script lang="ts">
     import {Vue, Component} from "vue-property-decorator";
-    import UiLogo from "./UiLogo";
-    import UiSearch from "./UiSearch";
+    import UiLogo from "./UiLogo.vue";
+    import UiSearch from "./UiSearch.vue";
 
     @Component({components: {UiLogo, UiSearch}})
     export default class UiHeader extends Vue {}

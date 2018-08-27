@@ -1,4 +1,4 @@
-<style lang="scss" scoped>
+<style lang="scss">
     .search {
         padding: 2rem;
     }
@@ -17,10 +17,10 @@
         border-radius: .5rem;
         padding: 1rem 1.5em;
         font-size: 3rem;
+    }
 
-        &:focus {
-            outline: none;
-        }
+    input:focus {
+        outline: none;
     }
 
     .fa-search {
@@ -43,7 +43,7 @@
     import {Vue, Component, Watch} from "vue-property-decorator";
     import {EventBus} from "../event-bus";
 
-    @Component({})
+    @Component
     export default class UiSearch extends Vue {
         searchInput: string = '';
 
