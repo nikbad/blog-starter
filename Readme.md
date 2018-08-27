@@ -1,10 +1,6 @@
+## Installation
+
 ```bash
-npm run watch
-open index.html 
+git clone https://github.com/nikbad/blog-starter.git && cd blog-starter
+yarn install && yarn build
 ```
-
-
-## Neues Paket
-1. in package.json hinzufügen
-2. yarn install
-3. import in ts datei
