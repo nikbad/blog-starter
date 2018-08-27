@@ -1,7 +1,26 @@
 <style lang="scss" scoped>
-    @import "styles/UiSinglePost";
-</style>
-<style lang="scss">
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+    }
+
+    .grid-item {
+        padding: 20px;
+        font-size: 30px;
+    }
+
+    .single-post--title {
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+
+    .single-post--body {
+        font-size: 1.7rem;
+    }
+
     mark {
         background-color: rgba(255, 255, 0, 1);
         color: #253648;
@@ -9,6 +28,7 @@
         padding-right: 0;
     }
 </style>
+
 <template>
     <div class="grid-container">
         <div class="single-post grid-item">
@@ -22,11 +42,9 @@
 
 <script lang="ts">
     import {Vue, Component, Prop} from "vue-property-decorator";
-
-    // TYPES
     import {Post} from "../types";
 
-    @Component({})
+    @Component
     export default class UiSinglePost extends Vue {
         @Prop() post!: Post;
         @Prop() searchInput!: string;
@@ -35,8 +53,11 @@
             if (this.searchInput.length === 0) {
                 return value;
             }
-            return value.replace(new RegExp('(' + this.searchInput + ')', 'i'), '<mark>$1</mark>');
+
+            return value.replace(
+                new RegExp('(' + this.searchInput + ')', 'i'),
+                '<mark>$1</mark>'
+            );
         };
     }
-
 </script>

@@ -1,8 +1,35 @@
 <style lang="scss" scoped>
-    @import "styles/UiSearch";
+    .search {
+        padding: 2rem;
+    }
+
+    .search-field {
+        position: relative;
+        font-size: 3rem;
+        border: 1px solid black;
+        color: rgba(0, 0, 0, .5);
+        border-radius: .5rem;
+        background-color: white;
+    }
+
+    input {
+        border: none;
+        border-radius: .5rem;
+        padding: 1rem 1.5em;
+        font-size: 3rem;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .fa-search {
+        position: absolute;
+        right: 1rem;
+        top: 1.2rem;
+    }
 </style>
-<style lang="scss">
-</style>
+
 <template>
     <div class="search">
         <div class="search-field">

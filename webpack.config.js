@@ -1,7 +1,10 @@
-var path = require('path')
-var webpack = require('webpack')
+let path = require('path')
+let VueLoader = require('vue-loader')
+let webpack = require('webpack')
 
 module.exports = {
+    mode: 'development',
+    devtool: '#eval-source-map',
     entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -12,16 +15,12 @@ module.exports = {
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader',
+                loader: "vue-loader",
                 options: {
                     loaders: {
-                        // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-                        // the "scss" and "sass" values for the lang attribute to the right configs here.
-                        // other preprocessors should work out of the box, no loader config like this necessary.
-                        'scss': 'vue-style-loader!css-loader!sass-loader',
-                        'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
+                        "scss": "vue-style-loader!css-loader!sass-loader",
+                        "sass": "vue-style-loader!css-loader!sass-loader?indentedSyntax",
                     }
-                    // other vue-loader options go here
                 }
             },
             {
@@ -33,6 +32,18 @@ module.exports = {
                 }
             },
             {
+                test: /\.css$/,
+                use: [ "style-loader", "css-loader" ],
+            },
+            {
+                test: /\.scss$/i,
+                use: [
+                    {
+                        loader: "sass-loader"
+                    },
+                ]
+            },
+            {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
@@ -42,7 +53,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts', '.js', '.vue', '.json'],
+        extensions: ['.ts', '.js', '.vue', '.json', '.css', '.scss'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js'
         }
@@ -54,5 +65,7 @@ module.exports = {
     performance: {
         hints: false
     },
-    devtool: '#eval-source-map'
+    plugins: [
+        new VueLoader.VueLoaderPlugin(),
+    ],
 };
